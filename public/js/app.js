@@ -1857,6 +1857,8 @@ __webpack_require__(/*! ./components/navbar/Navbar */ "./resources/js/components
 
 __webpack_require__(/*! ./components/upper-menu/UpperMenu */ "./resources/js/components/upper-menu/UpperMenu.js");
 
+__webpack_require__(/*! ./components/carousel/Gallery */ "./resources/js/components/carousel/Gallery.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -1903,6 +1905,36 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
+/***/ "./resources/js/components/carousel/Gallery.js":
+/*!*****************************************************!*\
+  !*** ./resources/js/components/carousel/Gallery.js ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Gallery)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+function Gallery() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h1", {
+      className: "text-2xl",
+      children: "Mordowanie"
+    })
+  });
+}
+
+if (document.getElementById("gallery")) {
+  ReactDOM.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Gallery, {}), document.getElementById("gallery"));
+}
+
+/***/ }),
+
 /***/ "./resources/js/components/navbar/Navbar.js":
 /*!**************************************************!*\
   !*** ./resources/js/components/navbar/Navbar.js ***!
@@ -1940,8 +1972,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-function Navbar(_ref) {
-  var fixed = _ref.fixed;
+
+function Navbar() {
   var styles = {
     fadeInRight: {
       animation: "x 1s",
@@ -1975,7 +2007,7 @@ function Navbar(_ref) {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(radium__WEBPACK_IMPORTED_MODULE_5__.default, {
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("a", {
               className: "text-3xl font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase text-white",
-              href: "{{ route('home') }}",
+              href: "/home",
               style: styles.fadeInLeft,
               children: ["IILO GDYNIA", " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
                 className: "w-3 h-3 bg-red-500 inline-block rounded-full"
@@ -1998,10 +2030,25 @@ function Navbar(_ref) {
             style: styles.fadeInRight,
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("ul", {
               className: "flex flex-col lg:flex-row list-none lg:ml-auto",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("li", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
                 className: "nav-item",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("button", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("a", {
                   type: "button",
+                  className: "px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75",
+                  href: "/home",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("i", {
+                    className: "fas fa-home text-lg leading-lg text-white opacity-75"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
+                    className: "ml-2",
+                    children: "Strona g\u0142\xF3wna"
+                  })]
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
+                className: "nav-item",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("button", {
+                  type: "button",
+                  className: "px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 focus:border-transparent focus:outline-none",
+                  href: "#pablo",
                   onClick: function onClick() {
                     if (!document.getElementById("firstDropdown").classList.contains("hidden")) {
                       document.getElementById("firstDropdown").classList.add("hidden");
@@ -2009,47 +2056,6 @@ function Navbar(_ref) {
                       document.getElementById("firstDropdown").classList.remove("hidden");
                     }
                   },
-                  className: "px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75",
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("i", {
-                    className: "fas fa-home text-lg leading-lg text-white opacity-75"
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-                    className: "ml-2",
-                    children: "Strona g\u0142\xF3wna"
-                  })]
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(radium__WEBPACK_IMPORTED_MODULE_5__.default, {
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("ul", {
-                    id: "firstDropdown",
-                    style: styles.fadeIn,
-                    "class": "hidden relative lg:absolute text-gray-700 pt-1",
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
-                      "class": "",
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
-                        "class": "rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap",
-                        href: "#",
-                        children: "One"
-                      })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
-                      "class": "",
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
-                        "class": "bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap",
-                        href: "#",
-                        children: "Two"
-                      })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
-                      "class": "",
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
-                        "class": "rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap",
-                        href: "#",
-                        children: "Three is the magic number"
-                      })
-                    })]
-                  })
-                })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
-                className: "nav-item",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("a", {
-                  className: "px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75",
-                  href: "#pablo",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("i", {
                     className: "fas fa-graduation-cap text-lg leading-lg text-white opacity-75"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
@@ -2057,11 +2063,47 @@ function Navbar(_ref) {
                     children: "Struktura IILO"
                   })]
                 })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(radium__WEBPACK_IMPORTED_MODULE_5__.default, {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("ul", {
+                  id: "firstDropdown",
+                  style: styles.fadeIn,
+                  "class": "hidden relative lg:absolute text-gray-700 pt-1",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
+                    "class": "",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
+                      "class": "rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap",
+                      href: "#",
+                      children: "One"
+                    })
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
+                    "class": "",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
+                      "class": "bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap",
+                      href: "#",
+                      children: "Two"
+                    })
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
+                    "class": "",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
+                      "class": "rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap",
+                      href: "#",
+                      children: "Three is the magic number"
+                    })
+                  })]
+                })
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
                 className: "nav-item",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("a", {
-                  className: "px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("button", {
+                  type: "button",
+                  className: "px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 focus:border-transparent focus:outline-none",
                   href: "#pablo",
+                  onClick: function onClick() {
+                    if (!document.getElementById("secondDropdown").classList.contains("hidden")) {
+                      document.getElementById("secondDropdown").classList.add("hidden");
+                    } else {
+                      document.getElementById("secondDropdown").classList.remove("hidden");
+                    }
+                  },
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("i", {
                     className: "fas fa-building text-lg leading-lg text-white opacity-75"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
@@ -2069,11 +2111,47 @@ function Navbar(_ref) {
                     children: "Liceum"
                   })]
                 })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(radium__WEBPACK_IMPORTED_MODULE_5__.default, {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("ul", {
+                  id: "secondDropdown",
+                  style: styles.fadeIn,
+                  "class": "hidden relative lg:absolute text-gray-700 pt-1",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
+                    "class": "",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
+                      "class": "rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap",
+                      href: "#",
+                      children: "One"
+                    })
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
+                    "class": "",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
+                      "class": "bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap",
+                      href: "#",
+                      children: "Two"
+                    })
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
+                    "class": "",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
+                      "class": "rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap",
+                      href: "#",
+                      children: "Three is the magic number"
+                    })
+                  })]
+                })
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
                 className: "nav-item",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("a", {
-                  className: "px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("button", {
+                  type: "button",
+                  className: "px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 focus:border-transparent focus:outline-none",
                   href: "#pablo",
+                  onClick: function onClick() {
+                    if (!document.getElementById("thirdDropdown").classList.contains("hidden")) {
+                      document.getElementById("thirdDropdown").classList.add("hidden");
+                    } else {
+                      document.getElementById("thirdDropdown").classList.remove("hidden");
+                    }
+                  },
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("i", {
                     className: "fas fa-language text-lg leading-lg text-white opacity-75"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
@@ -2081,16 +2159,80 @@ function Navbar(_ref) {
                     children: "Sekcja dwuj\u0119zyczna"
                   })]
                 })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(radium__WEBPACK_IMPORTED_MODULE_5__.default, {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("ul", {
+                  id: "thirdDropdown",
+                  style: styles.fadeIn,
+                  "class": "hidden relative lg:absolute text-gray-700 pt-1",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
+                    "class": "",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
+                      "class": "rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap",
+                      href: "#",
+                      children: "One"
+                    })
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
+                    "class": "",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
+                      "class": "bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap",
+                      href: "#",
+                      children: "Two"
+                    })
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
+                    "class": "",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
+                      "class": "rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap",
+                      href: "#",
+                      children: "Three is the magic number"
+                    })
+                  })]
+                })
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
                 className: "nav-item",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("a", {
-                  className: "px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("button", {
+                  type: "button",
+                  className: "px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 focus:border-transparent focus:outline-none",
                   href: "#pablo",
+                  onClick: function onClick() {
+                    if (!document.getElementById("fourthDropdown").classList.contains("hidden")) {
+                      document.getElementById("fourthDropdown").classList.add("hidden");
+                    } else {
+                      document.getElementById("fourthDropdown").classList.remove("hidden");
+                    }
+                  },
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("i", {
                     className: "fas fa-phone-square text-lg leading-lg text-white opacity-75"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
                     className: "ml-2",
                     children: "Kontakt"
+                  })]
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(radium__WEBPACK_IMPORTED_MODULE_5__.default, {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("ul", {
+                  id: "fourthDropdown",
+                  style: styles.fadeIn,
+                  "class": "hidden relative lg:absolute text-gray-700 pt-1",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
+                    "class": "",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
+                      "class": "rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap",
+                      href: "#",
+                      children: "One"
+                    })
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
+                    "class": "",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
+                      "class": "bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap",
+                      href: "#",
+                      children: "Two"
+                    })
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
+                    "class": "",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
+                      "class": "rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap",
+                      href: "#",
+                      children: "Three is the magic number"
+                    })
                   })]
                 })
               })]

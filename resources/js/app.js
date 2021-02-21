@@ -14,3 +14,4 @@ require("./bootstrap");
 
 require("./components/navbar/Navbar");
 require("./components/upper-menu/UpperMenu");
+require("./components/carousel/Gallery");

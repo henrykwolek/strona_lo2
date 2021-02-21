@@ -13,6 +13,7 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
     {{-- <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script> --}}
     <script src="https://kit.fontawesome.com/497fca77ec.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -29,5 +30,6 @@
 </head>
 <body>
     <div id="navbar"></div>
+    <div id="gallery"></div>
 </body>
 </html>

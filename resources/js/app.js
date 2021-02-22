@@ -15,3 +15,5 @@ require("./bootstrap");
 require("./components/navbar/Navbar");
 require("./components/upper-menu/UpperMenu");
 require("./components/carousel/Gallery");
+require("./components/carousel/MainPosts");
+require("./components/carousel/Banner");

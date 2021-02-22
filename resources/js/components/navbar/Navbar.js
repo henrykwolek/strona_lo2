@@ -25,12 +25,12 @@ function Navbar() {
     return (
         <>
             <nav
-                className="relative flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg mb-3"
+                className="relative flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg mb-6"
                 style={{
                     background: "#091c29",
                 }}
             >
-                <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
+                <div className="w-full lg:w-9/12 px-4 mx-auto flex flex-wrap items-center justify-between">
                     <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
                         <StyleRoot>
                             <a

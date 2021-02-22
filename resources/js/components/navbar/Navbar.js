@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { fadeInLeft, fadeInRight, fadeIn } from "react-animations";
 import Radium, { StyleRoot } from "radium";
 import { Route } from "react-router-dom";
+import { event } from "jquery";
 
 function Navbar() {
     const styles = {
@@ -20,6 +21,7 @@ function Navbar() {
         },
     };
     const [navbarOpen, setNavbarOpen] = React.useState(false);
+
     return (
         <>
             <nav
@@ -70,270 +72,352 @@ function Navbar() {
                                         </span>
                                     </a>
                                 </li>
-                                <li className="nav-item">
-                                    <button
-                                        type="button"
-                                        className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 focus:border-transparent focus:outline-none"
-                                        href="#pablo"
-                                        onClick={() => {
-                                            if (
-                                                !document
-                                                    .getElementById(
-                                                        "firstDropdown"
-                                                    )
-                                                    .classList.contains(
-                                                        "hidden"
-                                                    )
-                                            ) {
-                                                document
-                                                    .getElementById(
-                                                        "firstDropdown"
-                                                    )
-                                                    .classList.add("hidden");
-                                            } else {
-                                                document
-                                                    .getElementById(
-                                                        "firstDropdown"
-                                                    )
-                                                    .classList.remove("hidden");
-                                            }
-                                        }}
-                                    >
-                                        <i className="fas fa-graduation-cap text-lg leading-lg text-white opacity-75"></i>
-                                        <span className="ml-2">
-                                            Struktura IILO
-                                        </span>
-                                    </button>
-                                </li>
-                                <StyleRoot>
-                                    <ul
-                                        id="firstDropdown"
-                                        style={styles.fadeIn}
-                                        class="hidden relative lg:absolute text-gray-700 pt-1"
-                                    >
-                                        <li class="">
-                                            <a
-                                                class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
-                                                href="#"
-                                            >
-                                                One
-                                            </a>
-                                        </li>
-                                        <li class="">
-                                            <a
-                                                class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
-                                                href="#"
-                                            >
-                                                Two
-                                            </a>
-                                        </li>
-                                        <li class="">
-                                            <a
-                                                class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
-                                                href="#"
-                                            >
-                                                Three is the magic number
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </StyleRoot>
-                                <li className="nav-item">
-                                <button
-                                        type="button"
-                                        className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 focus:border-transparent focus:outline-none"
-                                        href="#pablo"
-                                        onClick={() => {
-                                            if (
-                                                !document
-                                                    .getElementById(
-                                                        "secondDropdown"
-                                                    )
-                                                    .classList.contains(
-                                                        "hidden"
-                                                    )
-                                            ) {
-                                                document
-                                                    .getElementById(
-                                                        "secondDropdown"
-                                                    )
-                                                    .classList.add("hidden");
-                                            } else {
-                                                document
-                                                    .getElementById(
-                                                        "secondDropdown"
-                                                    )
-                                                    .classList.remove("hidden");
-                                            }
-                                        }}
-                                    >
-                                        <i className="fas fa-building text-lg leading-lg text-white opacity-75"></i>
-                                        <span className="ml-2">Liceum</span>
-                                    </button>
-                                </li>
-                                <StyleRoot>
-                                    <ul
-                                        id="secondDropdown"
-                                        style={styles.fadeIn}
-                                        class="hidden relative lg:absolute text-gray-700 pt-1"
-                                    >
-                                        <li class="">
-                                            <a
-                                                class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
-                                                href="#"
-                                            >
-                                                One
-                                            </a>
-                                        </li>
-                                        <li class="">
-                                            <a
-                                                class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
-                                                href="#"
-                                            >
-                                                Two
-                                            </a>
-                                        </li>
-                                        <li class="">
-                                            <a
-                                                class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
-                                                href="#"
-                                            >
-                                                Three is the magic number
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </StyleRoot>
-                                <li className="nav-item">
-                                <button
-                                        type="button"
-                                        className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 focus:border-transparent focus:outline-none"
-                                        href="#pablo"
-                                        onClick={() => {
-                                            if (
-                                                !document
-                                                    .getElementById(
-                                                        "thirdDropdown"
-                                                    )
-                                                    .classList.contains(
-                                                        "hidden"
-                                                    )
-                                            ) {
-                                                document
-                                                    .getElementById(
-                                                        "thirdDropdown"
-                                                    )
-                                                    .classList.add("hidden");
-                                            } else {
-                                                document
-                                                    .getElementById(
-                                                        "thirdDropdown"
-                                                    )
-                                                    .classList.remove("hidden");
-                                            }
-                                        }}
-                                    >
-                                        <i className="fas fa-language text-lg leading-lg text-white opacity-75"></i>
-                                        <span className="ml-2">
-                                            Sekcja dwujęzyczna
-                                        </span>
-                                    </button>
-                                </li>
-                                <StyleRoot>
-                                    <ul
-                                        id="thirdDropdown"
-                                        style={styles.fadeIn}
-                                        class="hidden relative lg:absolute text-gray-700 pt-1"
-                                    >
-                                        <li class="">
-                                            <a
-                                                class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
-                                                href="#"
-                                            >
-                                                One
-                                            </a>
-                                        </li>
-                                        <li class="">
-                                            <a
-                                                class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
-                                                href="#"
-                                            >
-                                                Two
-                                            </a>
-                                        </li>
-                                        <li class="">
-                                            <a
-                                                class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
-                                                href="#"
-                                            >
-                                                Three is the magic number
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </StyleRoot>
-                                <li className="nav-item">
-                                <button
-                                        type="button"
-                                        className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 focus:border-transparent focus:outline-none"
-                                        href="#pablo"
-                                        onClick={() => {
-                                            if (
-                                                !document
-                                                    .getElementById(
-                                                        "fourthDropdown"
-                                                    )
-                                                    .classList.contains(
-                                                        "hidden"
-                                                    )
-                                            ) {
-                                                document
-                                                    .getElementById(
-                                                        "fourthDropdown"
-                                                    )
-                                                    .classList.add("hidden");
-                                            } else {
-                                                document
-                                                    .getElementById(
-                                                        "fourthDropdown"
-                                                    )
-                                                    .classList.remove("hidden");
-                                            }
-                                        }}
-                                    >
-                                        <i className="fas fa-phone-square text-lg leading-lg text-white opacity-75"></i>
-                                        <span className="ml-2">Kontakt</span>
-                                    </button>
-                                </li>
-                                <StyleRoot>
-                                    <ul
-                                        id="fourthDropdown"
-                                        style={styles.fadeIn}
-                                        class="hidden relative lg:absolute text-gray-700 pt-1"
-                                    >
-                                        <li class="">
-                                            <a
-                                                class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
-                                                href="#"
-                                            >
-                                                One
-                                            </a>
-                                        </li>
-                                        <li class="">
-                                            <a
-                                                class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
-                                                href="#"
-                                            >
-                                                Two
-                                            </a>
-                                        </li>
-                                        <li class="">
-                                            <a
-                                                class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
-                                                href="#"
-                                            >
-                                                Three is the magic number
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </StyleRoot>
+                                <div className="flex-col lg:flex-row">
+                                    <li className="nav-item">
+                                        <button
+                                            type="button"
+                                            className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 focus:border-transparent focus:outline-none"
+                                            href="#pablo"
+                                            onClick={() => {
+                                                if (
+                                                    !document
+                                                        .getElementById(
+                                                            "firstDropdown"
+                                                        )
+                                                        .classList.contains(
+                                                            "hidden"
+                                                        )
+                                                ) {
+                                                    document
+                                                        .getElementById(
+                                                            "firstDropdown"
+                                                        )
+                                                        .classList.add(
+                                                            "hidden"
+                                                        );
+                                                } else {
+                                                    document
+                                                        .getElementById(
+                                                            "firstDropdown"
+                                                        )
+                                                        .classList.remove(
+                                                            "hidden"
+                                                        );
+                                                }
+                                            }}
+                                        >
+                                            <i className="fas fa-graduation-cap text-lg leading-lg text-white opacity-75"></i>
+                                            <span className="ml-2">
+                                                Struktura IILO
+                                            </span>
+                                        </button>
+                                    </li>
+                                    <StyleRoot>
+                                        <ul
+                                            id="firstDropdown"
+                                            style={styles.fadeIn}
+                                            class="hidden relative lg:absolute text-gray-700 pt-1"
+                                        >
+                                            <li class="w-full">
+                                                <a
+                                                    class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                                                    href="#"
+                                                >
+                                                    Dyrekcja
+                                                </a>
+                                            </li>
+                                            <li class="w-full">
+                                                <a
+                                                    class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                                                    href="#"
+                                                >
+                                                    Nauczyciele
+                                                </a>
+                                            </li>
+                                            <li class="w-full">
+                                                <a
+                                                    class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                                                    href="#"
+                                                >
+                                                    Pedagog/psycholog
+                                                </a>
+                                            </li>
+                                            <li class="w-full">
+                                                <a
+                                                    class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                                                    href="#"
+                                                >
+                                                    Administracja
+                                                </a>
+                                            </li>
+                                            <li class="w-full">
+                                                <a
+                                                    class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                                                    href="#"
+                                                >
+                                                    RODO
+                                                </a>
+                                            </li>
+                                            <li class="w-full">
+                                                <a
+                                                    class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                                                    href="#"
+                                                >
+                                                    Polisa
+                                                </a>
+                                            </li>
+                                            <li class="w-full">
+                                                <a
+                                                    class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                                                    href="#"
+                                                >
+                                                    Samorząd uczniowski
+                                                </a>
+                                            </li>
+                                            <li class="w-full">
+                                                <a
+                                                    class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                                                    href="#"
+                                                >
+                                                    Rada rodziców
+                                                </a>
+                                            </li>
+                                            <li class="w-full">
+                                                <a
+                                                    class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                                                    href="#"
+                                                >
+                                                    Dokumenty szkolne
+                                                </a>
+                                            </li>
+                                            <li class="w-full">
+                                                <a
+                                                    class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                                                    href="#"
+                                                >
+                                                    PSO zachowania
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </StyleRoot>
+                                </div>
+                                <div className="flex-col lg:flex-row">
+                                    <li className="nav-item">
+                                        <button
+                                            type="button"
+                                            className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 focus:border-transparent focus:outline-none"
+                                            href="#pablo"
+                                            onClick={() => {
+                                                if (
+                                                    !document
+                                                        .getElementById(
+                                                            "secondDropdown"
+                                                        )
+                                                        .classList.contains(
+                                                            "hidden"
+                                                        )
+                                                ) {
+                                                    document
+                                                        .getElementById(
+                                                            "secondDropdown"
+                                                        )
+                                                        .classList.add(
+                                                            "hidden"
+                                                        );
+                                                } else {
+                                                    document
+                                                        .getElementById(
+                                                            "secondDropdown"
+                                                        )
+                                                        .classList.remove(
+                                                            "hidden"
+                                                        );
+                                                }
+                                            }}
+                                        >
+                                            <i className="fas fa-building text-lg leading-lg text-white opacity-75"></i>
+                                            <span className="ml-2">Liceum</span>
+                                        </button>
+                                    </li>
+                                    <StyleRoot>
+                                        <ul
+                                            id="secondDropdown"
+                                            style={styles.fadeIn}
+                                            class="hidden relative lg:absolute text-gray-700 pt-1"
+                                        >
+                                            <li class="">
+                                                <a
+                                                    class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                                                    href="#"
+                                                >
+                                                    Profile klas
+                                                </a>
+                                            </li>
+                                            <li class="">
+                                                <a
+                                                    class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                                                    href="#"
+                                                >
+                                                    Konkursy i olimpiady
+                                                </a>
+                                            </li>
+                                            <li class="">
+                                                <a
+                                                    class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                                                    href="#"
+                                                >
+                                                    Osiągnięcia sportowe
+                                                </a>
+                                            </li>
+                                            <li class="">
+                                                <a
+                                                    class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                                                    href="#"
+                                                >
+                                                    Atuty
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </StyleRoot>
+                                </div>
+                                <div className="flex-col lg:flex-row">
+                                    <li className="nav-item">
+                                        <button
+                                            type="button"
+                                            className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 focus:border-transparent focus:outline-none"
+                                            href="#pablo"
+                                            onClick={() => {
+                                                if (
+                                                    !document
+                                                        .getElementById(
+                                                            "thirdDropdown"
+                                                        )
+                                                        .classList.contains(
+                                                            "hidden"
+                                                        )
+                                                ) {
+                                                    document
+                                                        .getElementById(
+                                                            "thirdDropdown"
+                                                        )
+                                                        .classList.add(
+                                                            "hidden"
+                                                        );
+                                                } else {
+                                                    document
+                                                        .getElementById(
+                                                            "thirdDropdown"
+                                                        )
+                                                        .classList.remove(
+                                                            "hidden"
+                                                        );
+                                                }
+                                            }}
+                                        >
+                                            <i className="fas fa-language text-lg leading-lg text-white opacity-75"></i>
+                                            <span className="ml-2">
+                                                Sekcja dwujęzyczna
+                                            </span>
+                                        </button>
+                                    </li>
+                                    <StyleRoot>
+                                        <ul
+                                            id="thirdDropdown"
+                                            style={styles.fadeIn}
+                                            class="hidden relative lg:absolute text-gray-700 pt-1"
+                                        >
+                                            <li class="">
+                                                <a
+                                                    class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                                                    href="#"
+                                                >
+                                                    Informacje
+                                                </a>
+                                            </li>
+                                            <li class="">
+                                                <a
+                                                    class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                                                    href="#"
+                                                >
+                                                    Wymiana
+                                                </a>
+                                            </li>
+                                            <li class="">
+                                                <a
+                                                    class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                                                    href="#"
+                                                >
+                                                    Version française
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </StyleRoot>
+                                </div>
+                                <div className="flex-col lg:flex-row">
+                                    <li className="nav-item">
+                                        <button
+                                            type="button"
+                                            className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 focus:border-transparent focus:outline-none"
+                                            href="#pablo"
+                                            onClick={() => {
+                                                if (
+                                                    !document
+                                                        .getElementById(
+                                                            "fourthDropdown"
+                                                        )
+                                                        .classList.contains(
+                                                            "hidden"
+                                                        )
+                                                ) {
+                                                    document
+                                                        .getElementById(
+                                                            "fourthDropdown"
+                                                        )
+                                                        .classList.add(
+                                                            "hidden"
+                                                        );
+                                                } else {
+                                                    document
+                                                        .getElementById(
+                                                            "fourthDropdown"
+                                                        )
+                                                        .classList.remove(
+                                                            "hidden"
+                                                        );
+                                                }
+                                            }}
+                                        >
+                                            <i className="fas fa-phone-square text-lg leading-lg text-white opacity-75"></i>
+                                            <span className="ml-2">
+                                                Kontakt
+                                            </span>
+                                        </button>
+                                    </li>
+                                    <StyleRoot>
+                                        <ul
+                                            id="fourthDropdown"
+                                            style={styles.fadeIn}
+                                            class="hidden relative lg:absolute text-gray-700 pt-1"
+                                        >
+                                            <li class="">
+                                                <a
+                                                    class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                                                    href="#"
+                                                >
+                                                    Adres
+                                                </a>
+                                            </li>
+                                            <li class="">
+                                                <a
+                                                    class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                                                    href="#"
+                                                >
+                                                    Dojazd
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </StyleRoot>
+                                </div>
                             </ul>
                         </div>
                     </StyleRoot>

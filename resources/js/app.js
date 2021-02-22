@@ -17,3 +17,6 @@ require("./components/upper-menu/UpperMenu");
 require("./components/carousel/Gallery");
 require("./components/carousel/MainPosts");
 require("./components/carousel/Banner");
+require("./components/carousel/LeftSidebar");
+require("./components/carousel/MiddleMainContent");
+require("./components/carousel/RightSidebar");

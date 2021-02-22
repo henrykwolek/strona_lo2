@@ -1863,6 +1863,12 @@ __webpack_require__(/*! ./components/carousel/MainPosts */ "./resources/js/compo
 
 __webpack_require__(/*! ./components/carousel/Banner */ "./resources/js/components/carousel/Banner.js");
 
+__webpack_require__(/*! ./components/carousel/LeftSidebar */ "./resources/js/components/carousel/LeftSidebar.js");
+
+__webpack_require__(/*! ./components/carousel/MiddleMainContent */ "./resources/js/components/carousel/MiddleMainContent.js");
+
+__webpack_require__(/*! ./components/carousel/RightSidebar */ "./resources/js/components/carousel/RightSidebar.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -2390,6 +2396,238 @@ if (document.getElementById("gallery")) {
 
 /***/ }),
 
+/***/ "./resources/js/components/carousel/LeftSidebar.js":
+/*!*********************************************************!*\
+  !*** ./resources/js/components/carousel/LeftSidebar.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ LeftSidebar)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_animations__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-animations */ "./node_modules/react-animations/lib/index.js");
+/* harmony import */ var radium__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! radium */ "./node_modules/radium/es/index.js");
+/* harmony import */ var radium__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! radium */ "./node_modules/radium/es/components/style-root.js");
+/* harmony import */ var _MainPosts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./MainPosts */ "./resources/js/components/carousel/MainPosts.js");
+/* harmony import */ var _Banner__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Banner */ "./resources/js/components/carousel/Banner.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+
+
+
+var styles = {
+  fadeIn: {
+    animation: "x 1s",
+    animationName: radium__WEBPACK_IMPORTED_MODULE_6__.default.keyframes(react_animations__WEBPACK_IMPORTED_MODULE_2__.fadeIn, "fadeIn")
+  }
+};
+var images = ["https://images4.alphacoders.com/103/thumb-1920-1038322.jpg", "https://wallpaperaccess.com/full/2029165.jpg", "https://images7.alphacoders.com/617/617537.jpg", "https://wallpapercave.com/wp/wp1880337.jpg", "https://i.pinimg.com/originals/60/53/64/605364731155b9c3643da99d121319d5.jpg"];
+var span_ids = ["firstSpan", "secondSpan", "thirdSpan", "fourthSpan", "fifthSpan"];
+function LeftSidebar() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("button", {
+      id: "menuDodatkoweTrigger",
+      className: "px-3 mx-auto py-2 flex items-center uppercase font-bold leading-snug text-black text-base hover:opacity-75 focus:border-transparent focus:outline-none md:hidden lg:hidden",
+      onClick: function onClick() {
+        if (!document.getElementById("sidebarMenu").classList.contains("hidden")) {
+          document.getElementById("sidebarMenu").classList.add("hidden");
+          document.getElementById("menuDodatkoweTrigger").innerText = "Menu dodatkowe ▼";
+        } else {
+          document.getElementById("sidebarMenu").classList.remove("hidden");
+          document.getElementById("menuDodatkoweTrigger").innerText = "Menu dodatkowe ▲";
+        }
+      },
+      children: "Menu dodatkowe \u25BC"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(radium__WEBPACK_IMPORTED_MODULE_7__.default, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+        id: "sidebarMenu",
+        "class": "overflow-hidden hidden lg:block md:block max-w-full text-sm bg-white rounded-l w-full shadow-lg leading-normal mb-5",
+        style: styles.fadeIn,
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+          href: "#",
+          "class": "block group hover:bg-blue-500 px-4 border-b py-2",
+          children: "Szko\u0142a pami\u0119ta"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+          href: "#",
+          "class": "block group hover:bg-blue-500 px-4 border-b py-2",
+          children: "Rekrutacja"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+          href: "#",
+          "class": "block group hover:bg-blue-500 px-4 border-b py-2",
+          children: "Matura"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+          href: "#",
+          "class": "block group hover:bg-blue-500 px-4 border-b py-2",
+          children: "Po lekcjach"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+          href: "#",
+          "class": "block group hover:bg-blue-500 px-4 border-b py-2",
+          children: "Szkolna galeria"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+          href: "#",
+          "class": "block group hover:bg-blue-500 px-4 border-b py-2",
+          children: "Biblioteka"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+          href: "#",
+          "class": "block group hover:bg-blue-500 px-4 border-b py-2",
+          children: "Oferta biblioteki"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+          href: "#",
+          "class": "block group hover:bg-blue-500 px-4 border-b py-2",
+          children: "NPRCz"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+          href: "#",
+          "class": "block group hover:bg-blue-500 px-4 border-b py-2",
+          children: "Projekt - La CDV"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+          href: "#",
+          "class": "block group hover:bg-blue-500 px-4 border-b py-2",
+          children: "Wsp\xF3\u0142praca"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+          href: "#",
+          "class": "block group hover:bg-blue-500 px-4 border-b py-2",
+          children: "Wymiany"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+          href: "#",
+          "class": "block group hover:bg-blue-500 px-4 border-b py-2",
+          children: "Strzelnica"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+          href: "#",
+          "class": "block group hover:bg-blue-500 px-4 py-2",
+          children: "Redakcja serwisu"
+        })]
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+      "class": "hidden w-full bg-white shadow md:hidden lg:flex flex-col my-2 p-3",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
+        "class": "text-xl font-semibold pb-5",
+        children: "Galeria zdj\u0119\u0107"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+        "class": "grid grid-cols-3 gap-3",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+          "class": "hover:opacity-75",
+          src: "https://source.unsplash.com/collection/1346951/150x150?sig=1"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+          "class": "hover:opacity-75",
+          src: "https://source.unsplash.com/collection/1346951/150x150?sig=2"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+          "class": "hover:opacity-75",
+          src: "https://source.unsplash.com/collection/1346951/150x150?sig=3"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+          "class": "hover:opacity-75",
+          src: "https://source.unsplash.com/collection/1346951/150x150?sig=4"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+          "class": "hover:opacity-75",
+          src: "https://source.unsplash.com/collection/1346951/150x150?sig=5"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+          "class": "hover:opacity-75",
+          src: "https://source.unsplash.com/collection/1346951/150x150?sig=6"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+          "class": "hover:opacity-75",
+          src: "https://source.unsplash.com/collection/1346951/150x150?sig=7"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+          "class": "hover:opacity-75",
+          src: "https://source.unsplash.com/collection/1346951/150x150?sig=8"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+          "class": "hover:opacity-75",
+          src: "https://source.unsplash.com/collection/1346951/150x150?sig=9"
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("a", {
+        href: "#",
+        "class": "w-full bg-blue-800 text-white font-bold text-sm uppercase rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-6",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("i", {
+          "class": "fab fa-instagram mr-2"
+        }), " Follow @dgrzyb"]
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+      className: "w-full mx-auto hidden md:block lg:hidden",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+        className: "flex items-center justify-center mb-3",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("figure", {
+          className: "relative max-w-xs",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+            className: "rounded-lg shadow-xl",
+            src: "https://s-trojmiasto.pl/zdj/c/n/9/1246/3000x0/1246898.jpg"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("figcaption", {
+            className: "absolute w-full items-center bg-black rounded-lg opacity-60 text-lg -mt-12 text-white px-4",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+              className: "font-bold text-lg pb-2 pt-2 mt-1 text-white w-full",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h1", {
+                children: "Historia szko\u0142y"
+              })
+            })
+          })]
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(radium__WEBPACK_IMPORTED_MODULE_7__.default, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+          id: "sidebarMenu",
+          "class": "overflow-hidden max-w-full text-sm bg-white rounded w-full shadow-lg leading-normal mb-5",
+          style: styles.fadeIn,
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+            href: "#",
+            "class": "block group hover:bg-blue-500 px-4 border-b py-2",
+            children: "BIP"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+            href: "#",
+            "class": "block group hover:bg-blue-500 px-4 border-b py-2",
+            children: "Plan lekcji"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+            href: "#",
+            "class": "block group hover:bg-blue-500 px-4 border-b py-2",
+            children: "Plany dzwonk\xF3w"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+            href: "#",
+            "class": "block group hover:bg-blue-500 px-4 border-b py-2",
+            children: "Platforma Sunergia"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+            href: "#",
+            "class": "block group hover:bg-blue-500 px-4 border-b py-2",
+            children: "Platforma miejsca ED"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+            href: "#",
+            "class": "block group hover:bg-blue-500 px-4 border-b py-2",
+            children: "Kalendarium"
+          })]
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+        className: "flex flex-col",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+          href: "#",
+          "class": "text-blue-700 text-sm font-bold uppercase pb-4 mt-5 text-center",
+          children: "Office 365 & Teams"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+          className: "object-scale-down h-24 w-full",
+          src: "https://office365online.pl/wp-content/uploads/2015/11/Office-365-Logo.jpg"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+          className: "object-scale-down h-24 w-full",
+          src: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018\u2013present%29.svg/1200px-Microsoft_Office_Teams_%282018\u2013present%29.svg.png"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+          href: "#",
+          "class": "text-blue-700 text-center text-sm font-bold uppercase pb-4 mt-5",
+          children: "International Moot Court Gdynia, Poland 26.01. - 01.02. 2020"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+          className: "object-scale-down max-h-24 w-full",
+          src: "https://lo2gdynia.pl/images/2019_20/icm/log.jpg"
+        })]
+      })]
+    })]
+  });
+}
+
+if (document.getElementById("LeftSidebar")) {
+  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(LeftSidebar, {}), document.getElementById("LeftSidebar"));
+}
+
+/***/ }),
+
 /***/ "./resources/js/components/carousel/MainPosts.js":
 /*!*******************************************************!*\
   !*** ./resources/js/components/carousel/MainPosts.js ***!
@@ -2490,6 +2728,290 @@ function MainPosts(_ref) {
       })]
     })]
   });
+}
+
+/***/ }),
+
+/***/ "./resources/js/components/carousel/MiddleMainContent.js":
+/*!***************************************************************!*\
+  !*** ./resources/js/components/carousel/MiddleMainContent.js ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ MiddleMainContent)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_animations__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-animations */ "./node_modules/react-animations/lib/index.js");
+/* harmony import */ var radium__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! radium */ "./node_modules/radium/es/index.js");
+/* harmony import */ var radium__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! radium */ "./node_modules/radium/es/components/style-root.js");
+/* harmony import */ var _MainPosts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./MainPosts */ "./resources/js/components/carousel/MainPosts.js");
+/* harmony import */ var _Banner__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Banner */ "./resources/js/components/carousel/Banner.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+
+
+
+var styles = {
+  fadeIn: {
+    animation: "x 1s",
+    animationName: radium__WEBPACK_IMPORTED_MODULE_6__.default.keyframes(react_animations__WEBPACK_IMPORTED_MODULE_2__.fadeIn, "fadeIn")
+  }
+};
+var images = ["https://images4.alphacoders.com/103/thumb-1920-1038322.jpg", "https://wallpaperaccess.com/full/2029165.jpg", "https://images7.alphacoders.com/617/617537.jpg", "https://wallpapercave.com/wp/wp1880337.jpg", "https://i.pinimg.com/originals/60/53/64/605364731155b9c3643da99d121319d5.jpg"];
+var span_ids = ["firstSpan", "secondSpan", "thirdSpan", "fourthSpan", "fifthSpan"];
+function MiddleMainContent() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(radium__WEBPACK_IMPORTED_MODULE_7__.default, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+          style: styles.fadeIn,
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+            id: "imageSlideshow",
+            className: "object-scale-down mx-auto w-auto h-auto shadow-lg rounded-lg",
+            src: images[0]
+          })
+        })
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+      className: "text-center px-6 py-4",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
+        id: "firstSpan",
+        className: "w-5 h-5 mx-2 bg-gray-500 inline-block rounded-full cursor-pointer",
+        onClick: function onClick() {
+          span_ids.forEach(function (element) {
+            if (element != "firstSpan") {
+              if (document.getElementById(element).classList.contains("bg-gray-500")) {
+                document.getElementById(element).classList.remove("bg-gray-500");
+                document.getElementById(element).classList.add("bg-gray-300");
+                document.getElementById("firstSpan").classList.remove("bg-gray-300");
+                document.getElementById("firstSpan").classList.add("bg-gray-500");
+              } else {
+                if (document.getElementById(element).classList.contains("bg-gray-300")) {
+                  document.getElementById("firstSpan").classList.remove("bg-gray-300");
+                  document.getElementById("firstSpan").classList.add("bg-gray-500");
+                }
+              }
+            }
+          });
+          document.getElementById("imageSlideshow").src = images[0];
+        }
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
+        id: "secondSpan",
+        className: "w-5 h-5 mx-2 bg-gray-300 inline-block rounded-full cursor-pointer",
+        onClick: function onClick() {
+          span_ids.forEach(function (element) {
+            if (element != "secondSpan") {
+              if (document.getElementById(element).classList.contains("bg-gray-500")) {
+                document.getElementById(element).classList.remove("bg-gray-500");
+                document.getElementById(element).classList.add("bg-gray-300");
+                document.getElementById("secondSpan").classList.remove("bg-gray-300");
+                document.getElementById("secondSpan").classList.add("bg-gray-500");
+              } else {
+                if (document.getElementById(element).classList.contains("bg-gray-300")) {
+                  document.getElementById("secondSpan").classList.remove("bg-gray-300");
+                  document.getElementById("secondSpan").classList.add("bg-gray-500");
+                }
+              }
+            }
+          });
+          document.getElementById("imageSlideshow").src = images[1];
+        }
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
+        id: "thirdSpan",
+        className: "w-5 h-5 mx-2 bg-gray-300 inline-block rounded-full cursor-pointer",
+        onClick: function onClick() {
+          span_ids.forEach(function (element) {
+            if (element != "thirdSpan") {
+              if (document.getElementById(element).classList.contains("bg-gray-500")) {
+                document.getElementById(element).classList.remove("bg-gray-500");
+                document.getElementById(element).classList.add("bg-gray-300");
+                document.getElementById("thirdSpan").classList.remove("bg-gray-300");
+                document.getElementById("thirdSpan").classList.add("bg-gray-500");
+              } else {
+                if (document.getElementById(element).classList.contains("bg-gray-300")) {
+                  document.getElementById("thirdSpan").classList.remove("bg-gray-300");
+                  document.getElementById("thirdSpan").classList.add("bg-gray-500");
+                }
+              }
+            }
+          });
+          document.getElementById("imageSlideshow").src = images[2];
+        }
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
+        id: "fourthSpan",
+        className: "w-5 h-5 mx-2 bg-gray-300 inline-block rounded-full cursor-pointer",
+        onClick: function onClick() {
+          span_ids.forEach(function (element) {
+            if (element != "fourthSpan") {
+              if (document.getElementById(element).classList.contains("bg-gray-500")) {
+                document.getElementById(element).classList.remove("bg-gray-500");
+                document.getElementById(element).classList.add("bg-gray-300");
+                document.getElementById("fourthSpan").classList.remove("bg-gray-300");
+                document.getElementById("fourthSpan").classList.add("bg-gray-500");
+              } else {
+                if (document.getElementById(element).classList.contains("bg-gray-300")) {
+                  document.getElementById("fourthSpan").classList.remove("bg-gray-300");
+                  document.getElementById("fourthSpan").classList.add("bg-gray-500");
+                }
+              }
+            }
+          });
+          document.getElementById("imageSlideshow").src = images[3];
+        }
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
+        id: "fifthSpan",
+        className: "w-5 h-5 mx-2 bg-gray-300 inline-block rounded-full cursor-pointer",
+        onClick: function onClick() {
+          span_ids.forEach(function (element) {
+            if (element != "fifthSpan") {
+              if (document.getElementById(element).classList.contains("bg-gray-500")) {
+                document.getElementById(element).classList.remove("bg-gray-500");
+                document.getElementById(element).classList.add("bg-gray-300");
+                document.getElementById("fifthSpan").classList.remove("bg-gray-300");
+                document.getElementById("fifthSpan").classList.add("bg-gray-500");
+              } else {
+                if (document.getElementById(element).classList.contains("bg-gray-300")) {
+                  document.getElementById("fifthSpan").classList.remove("bg-gray-300");
+                  document.getElementById("fifthSpan").classList.add("bg-gray-500");
+                }
+              }
+            }
+          });
+          document.getElementById("imageSlideshow").src = images[4];
+        }
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+      id: "homePagePosts",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_MainPosts__WEBPACK_IMPORTED_MODULE_3__.default, {})
+    })]
+  });
+}
+
+if (document.getElementById("MiddleMainContent")) {
+  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(MiddleMainContent, {}), document.getElementById("MiddleMainContent"));
+}
+
+/***/ }),
+
+/***/ "./resources/js/components/carousel/RightSidebar.js":
+/*!**********************************************************!*\
+  !*** ./resources/js/components/carousel/RightSidebar.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ RightSidebar)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_animations__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-animations */ "./node_modules/react-animations/lib/index.js");
+/* harmony import */ var radium__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! radium */ "./node_modules/radium/es/index.js");
+/* harmony import */ var radium__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! radium */ "./node_modules/radium/es/components/style-root.js");
+/* harmony import */ var _MainPosts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./MainPosts */ "./resources/js/components/carousel/MainPosts.js");
+/* harmony import */ var _Banner__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Banner */ "./resources/js/components/carousel/Banner.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+
+
+
+var styles = {
+  fadeIn: {
+    animation: "x 1s",
+    animationName: radium__WEBPACK_IMPORTED_MODULE_6__.default.keyframes(react_animations__WEBPACK_IMPORTED_MODULE_2__.fadeIn, "fadeIn")
+  }
+};
+var images = ["https://images4.alphacoders.com/103/thumb-1920-1038322.jpg", "https://wallpaperaccess.com/full/2029165.jpg", "https://images7.alphacoders.com/617/617537.jpg", "https://wallpapercave.com/wp/wp1880337.jpg", "https://i.pinimg.com/originals/60/53/64/605364731155b9c3643da99d121319d5.jpg"];
+var span_ids = ["firstSpan", "secondSpan", "thirdSpan", "fourthSpan", "fifthSpan"];
+function RightSidebar() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+      className: "flex items-center justify-center mb-3",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("figure", {
+        className: "relative max-w-xs",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+          className: "rounded-lg shadow-xl",
+          src: "https://s-trojmiasto.pl/zdj/c/n/9/1246/3000x0/1246898.jpg"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("figcaption", {
+          className: " w-full items-center bg-black rounded-lg opacity-60 text-lg -mt-12 text-white px-4",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+            className: "font-bold text-lg pb-2 pt-2 mt-1 text-white w-full",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h1", {
+              children: "Historia szko\u0142y"
+            })
+          })
+        })]
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(radium__WEBPACK_IMPORTED_MODULE_7__.default, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+        id: "sidebarMenu",
+        "class": "overflow-hidden max-w-full text-sm bg-white rounded w-full shadow-lg leading-normal mb-5",
+        style: styles.fadeIn,
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+          href: "#",
+          "class": "block group hover:bg-blue-500 px-4 border-b py-2",
+          children: "BIP"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+          href: "#",
+          "class": "block group hover:bg-blue-500 px-4 border-b py-2",
+          children: "Plan lekcji"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+          href: "#",
+          "class": "block group hover:bg-blue-500 px-4 border-b py-2",
+          children: "Plany dzwonk\xF3w"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+          href: "#",
+          "class": "block group hover:bg-blue-500 px-4 border-b py-2",
+          children: "Platforma Sunergia"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+          href: "#",
+          "class": "block group hover:bg-blue-500 px-4 border-b py-2",
+          children: "Platforma miejsca ED"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+          href: "#",
+          "class": "block group hover:bg-blue-500 px-4 border-b py-2",
+          children: "Kalendarium"
+        })]
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+      className: "flex flex-col",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+        href: "#",
+        "class": "text-blue-700 text-sm font-bold uppercase pb-4 mt-5 text-center",
+        children: "Office 365 & Teams"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+        className: "object-scale-down h-24 w-full",
+        src: "https://office365online.pl/wp-content/uploads/2015/11/Office-365-Logo.jpg"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+        className: "object-scale-down h-24 w-full",
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018\u2013present%29.svg/1200px-Microsoft_Office_Teams_%282018\u2013present%29.svg.png"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+        href: "#",
+        "class": "text-blue-700 text-center text-sm font-bold uppercase pb-4 mt-5",
+        children: "International Moot Court Gdynia, Poland 26.01. - 01.02. 2020"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+        className: "object-scale-down max-h-24 w-full",
+        src: "https://lo2gdynia.pl/images/2019_20/icm/log.jpg"
+      })]
+    })]
+  });
+}
+
+if (document.getElementById("RightSidebar")) {
+  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(RightSidebar, {}), document.getElementById("RightSidebar"));
 }
 
 /***/ }),

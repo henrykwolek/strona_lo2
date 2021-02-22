@@ -30,6 +30,17 @@
 </head>
 <body>
     <div id="navbar"></div>
-    <div id="gallery"></div>
+    {{-- <div id="gallery"></div> --}}
+    <div class="px-4 w-full mx-auto flex flex-col lg:flex md:flex md:flex-row lg:flex-row lg:w-9/12">
+        <div class="w-full lg:w-3/12 md:w-4/12 mb-4">
+            <div id="LeftSidebar"></div>
+        </div>
+        <div class="w-full mx-2 lg:w-6/12 lg:block md:w-8/12">
+            @yield('content')
+        </div>
+        <div class="w-full lg:w-3/12 md:hidden sm:block lg:block">
+            <div id="RightSidebar"></div>
+        </div>
+    </div>
 </body>
 </html>

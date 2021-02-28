@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +17,19 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//User Routes
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
+//Admin routes
+Route::get("/dashboard", [AdminController::class, 'dashboard'])->name('dashboard');
+
+Route::get("/dashboard/new-post", [AdminController::class, 'createNewPost'])->name('new-post');
+Route::post("/dashboard/new-post", [AdminController::class, 'saveNewPost']);
+
+Route::get("/dashboard/post/{post}", [AdminController::class, 'editPost'])->name('edit-post');
+Route::patch("/dashboard/post/{post}", [AdminController::class, 'updatePost']);
+
+Route::delete("/dashboard/delete/{post}", [AdminController::class, 'destroyPost'])->name('destroy-post');
+
+Route::get("dashboard/profile/{user}", [AdminController::class, 'showUser'])->name('view-profile');
+Route::patch("dashboard/profile/{user}", [AdminController::class, 'updateUser'])->name('update-profile');

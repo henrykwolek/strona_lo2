@@ -4,6 +4,7 @@ import { fadeIn } from "react-animations";
 import Radium, { StyleRoot } from "radium";
 import MainPosts from "./MainPosts";
 import Banner from "./Banner";
+import { makeStyles } from "@material-ui/core/styles";
 
 const styles = {
     fadeIn: {
@@ -28,7 +29,16 @@ const span_ids = [
     "fifthSpan",
 ];
 
+const useStyles = makeStyles((theme) => ({
+    root: {
+        width: "100%",
+        maxWidth: 360,
+        backgroundColor: theme.palette.background.paper,
+    },
+}));
+
 export default function LeftSidebar() {
+    const classes = useStyles();
     return (
         <div>
             <button
@@ -61,7 +71,7 @@ export default function LeftSidebar() {
             <StyleRoot>
                 <div
                     id="sidebarMenu"
-                    class="overflow-hidden hidden lg:block md:block max-w-full text-sm bg-white rounded-l w-full shadow-lg leading-normal mb-5"
+                    class="overflow-hidden hidden lg:block md:block max-w-full text-sm bg-white rounded-lg w-full shadow-lg leading-normal mb-5"
                     style={styles.fadeIn}
                 >
                     <a
@@ -136,12 +146,15 @@ export default function LeftSidebar() {
                     >
                         Strzelnica
                     </a>
-                    <a href="#" class="block group hover:bg-blue-500 px-4 py-2">
-                        Redakcja serwisu
+                    <a
+                        href="/dashboard"
+                        class="block group hover:bg-blue-500 px-4 border-b py-2"
+                    >
+                        Redakcja
                     </a>
                 </div>
             </StyleRoot>
-            <div class="hidden w-full bg-white shadow md:hidden lg:flex flex-col my-2 p-3">
+            <div class="hidden w-full bg-white shadow md:flex lg:hidden xl:flex flex-col my-2 p-3">
                 <p class="text-xl font-semibold pb-5">Galeria zdjęć</p>
                 <div class="grid grid-cols-3 gap-3">
                     <img
@@ -185,7 +198,7 @@ export default function LeftSidebar() {
                     href="#"
                     class="w-full bg-blue-800 text-white font-bold text-sm uppercase rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-6"
                 >
-                    <i class="fab fa-instagram mr-2"></i> Follow @dgrzyb
+                    Przeglądaj zdjęcia
                 </a>
             </div>
             <div className="w-full mx-auto hidden md:block lg:hidden">
@@ -274,6 +287,7 @@ export default function LeftSidebar() {
                     />
                 </div>
             </div>
+            
         </div>
     );
 }

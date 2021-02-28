@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import { fadeIn } from "react-animations";
 import Radium, { StyleRoot } from "radium";
 import MainPosts from "./MainPosts";
+import DarkModeToggle from "react-dark-mode-toggle";
 import Banner from "./Banner";
 
 const styles = {
@@ -13,7 +14,7 @@ const styles = {
 };
 
 const images = [
-    "https://images4.alphacoders.com/103/thumb-1920-1038322.jpg",
+    "https://s-trojmiasto.pl/zdj/c/n/13/1247/960x540/1247662-Szkoly-z-historia-II-LO-w-Gdyni__kr.jpg",
     "https://wallpaperaccess.com/full/2029165.jpg",
     "https://images7.alphacoders.com/617/617537.jpg",
     "https://wallpapercave.com/wp/wp1880337.jpg",
@@ -29,6 +30,7 @@ const span_ids = [
 ];
 
 export default function MiddleMainContent() {
+    const [isDarkMode, setIsDarkMode] = useState(() => false);
     return (
         <div>
             <StyleRoot>
@@ -84,6 +86,9 @@ export default function MiddleMainContent() {
                         });
                         document.getElementById("imageSlideshow").src =
                             images[0];
+                        document.getElementById("imageSlideshow").style = "";
+                        document.getElementById("imageSlideshow").style =
+                            styles.fadeIn;
                     }}
                 ></span>
                 <span
@@ -261,7 +266,7 @@ export default function MiddleMainContent() {
             </div>
             <div id="homePagePosts">
                 {/* <Banner></Banner> */}
-                <MainPosts></MainPosts>
+                {/* <MainPosts></MainPosts> */}
             </div>
         </div>
     );

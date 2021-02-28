@@ -29,9 +29,10 @@
     </style>
 </head>
 <body>
-    <div id="navbar"></div>
+        <div id="navbar"></div>
+        @yield('underNavbar')
     {{-- <div id="gallery"></div> --}}
-    <div class="px-4 w-full mx-auto flex flex-col lg:flex md:flex md:flex-row lg:flex-row lg:w-9/12">
+    <div class="px-4 w-full mx-auto flex flex-col lg:flex md:flex md:flex-row lg:flex-row lg:w-10/12 2xl:w-9/12">
         <div class="w-full lg:w-3/12 md:w-4/12 mb-4">
             <div id="LeftSidebar"></div>
         </div>

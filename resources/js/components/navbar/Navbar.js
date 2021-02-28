@@ -2,8 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { fadeInLeft, fadeInRight, fadeIn } from "react-animations";
 import Radium, { StyleRoot } from "radium";
-import { Route } from "react-router-dom";
-import { event } from "jquery";
+import Button from "@material-ui/core/Button";
+import Menu from "@material-ui/core/Menu";
+import MenuItem from "@material-ui/core/MenuItem";
+import Fade from "@material-ui/core/Fade";
 
 function Navbar() {
     const styles = {
@@ -22,6 +24,17 @@ function Navbar() {
     };
     const [navbarOpen, setNavbarOpen] = React.useState(false);
 
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const open = Boolean(anchorEl);
+
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+
     return (
         <>
             <nav
@@ -30,12 +43,12 @@ function Navbar() {
                     background: "#091c29",
                 }}
             >
-                <div className="w-full lg:w-9/12 px-4 mx-auto flex flex-wrap items-center justify-between">
+                <div className="w-full lg:w-10/12 2xl:w-9/12 px-4 mx-auto flex flex-wrap items-center justify-between">
                     <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
                         <StyleRoot>
                             <a
                                 className="text-3xl font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase text-white"
-                                href="/home"
+                                href="/"
                                 style={styles.fadeInLeft}
                             >
                                 IILO GDYNIA{" "}
@@ -61,20 +74,33 @@ function Navbar() {
                         >
                             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
                                 <li className="nav-item">
-                                    <a
+                                    {/* <a
                                         type="button"
                                         className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                                        href="/home"
+                                        href="/"
                                     >
                                         <i className="fas fa-home text-lg leading-lg text-white opacity-75"></i>
                                         <span className="ml-2">
                                             Strona główna
                                         </span>
-                                    </a>
+                                    </a> */}
+                                    <Button
+                                        aria-controls="fade-menu"
+                                        aria-haspopup="true"
+                                        onClick={() => {
+                                            location.href = "/";
+                                        }}
+                                        className="hover:opacity-75 focus:border-transparent focus:outline-none"
+                                    >
+                                        <i className="fas fa-home text-lg leading-lg text-white opacity-75"></i>
+                                        <span className="ml-2 font-bold leading-snug text-white ">
+                                            Strona główna
+                                        </span>
+                                    </Button>
                                 </li>
                                 <div className="flex-col lg:flex-row">
                                     <li className="nav-item">
-                                        <button
+                                        {/* <button
                                             type="button"
                                             className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 focus:border-transparent focus:outline-none"
                                             href="#pablo"
@@ -110,9 +136,38 @@ function Navbar() {
                                             <span className="ml-2">
                                                 Struktura IILO
                                             </span>
-                                        </button>
+                                        </button> */}
+                                        <Button
+                                            aria-controls="fade-menu"
+                                            aria-haspopup="true"
+                                            onClick={handleClick}
+                                            className="hover:opacity-75 focus:border-transparent focus:outline-none"
+                                        >
+                                            <i className="fas fa-graduation-cap text-lg leading-lg text-white opacity-75"></i>
+                                            <span className="ml-2 font-bold leading-snug text-white ">
+                                                Struktura IILO
+                                            </span>
+                                        </Button>
+                                        <Menu
+                                            id="fade-menu"
+                                            anchorEl={anchorEl}
+                                            keepMounted
+                                            open={open}
+                                            onClose={handleClose}
+                                            TransitionComponent={Fade}
+                                        >
+                                            <MenuItem onClick={handleClose}>
+                                                Profile
+                                            </MenuItem>
+                                            <MenuItem onClick={handleClose}>
+                                                My account
+                                            </MenuItem>
+                                            <MenuItem onClick={handleClose}>
+                                                Logout
+                                            </MenuItem>
+                                        </Menu>
                                     </li>
-                                    <StyleRoot>
+                                    {/* <StyleRoot>
                                         <ul
                                             id="firstDropdown"
                                             style={styles.fadeIn}
@@ -199,11 +254,11 @@ function Navbar() {
                                                 </a>
                                             </li>
                                         </ul>
-                                    </StyleRoot>
+                                    </StyleRoot> */}
                                 </div>
                                 <div className="flex-col lg:flex-row">
                                     <li className="nav-item">
-                                        <button
+                                        {/* <button
                                             type="button"
                                             className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 focus:border-transparent focus:outline-none"
                                             href="#pablo"
@@ -237,9 +292,38 @@ function Navbar() {
                                         >
                                             <i className="fas fa-building text-lg leading-lg text-white opacity-75"></i>
                                             <span className="ml-2">Liceum</span>
-                                        </button>
+                                        </button> */}
+                                        <Button
+                                            aria-controls="fade-menu"
+                                            aria-haspopup="true"
+                                            onClick={handleClick}
+                                            className="hover:opacity-75 focus:border-transparent focus:outline-none"
+                                        >
+                                            <i className="fas fa-building text-lg leading-lg text-white opacity-75"></i>
+                                            <span className="ml-2 font-bold leading-snug text-white ">
+                                                Liceum
+                                            </span>
+                                        </Button>
+                                        <Menu
+                                            id="fade-menu"
+                                            anchorEl={anchorEl}
+                                            keepMounted
+                                            open={open}
+                                            onClose={handleClose}
+                                            TransitionComponent={Fade}
+                                        >
+                                            <MenuItem onClick={handleClose}>
+                                                Profile
+                                            </MenuItem>
+                                            <MenuItem onClick={handleClose}>
+                                                My account
+                                            </MenuItem>
+                                            <MenuItem onClick={handleClose}>
+                                                Logout
+                                            </MenuItem>
+                                        </Menu>
                                     </li>
-                                    <StyleRoot>
+                                    {/* <StyleRoot>
                                         <ul
                                             id="secondDropdown"
                                             style={styles.fadeIn}
@@ -278,11 +362,11 @@ function Navbar() {
                                                 </a>
                                             </li>
                                         </ul>
-                                    </StyleRoot>
+                                    </StyleRoot> */}
                                 </div>
                                 <div className="flex-col lg:flex-row">
                                     <li className="nav-item">
-                                        <button
+                                        {/* <button
                                             type="button"
                                             className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 focus:border-transparent focus:outline-none"
                                             href="#pablo"
@@ -318,9 +402,38 @@ function Navbar() {
                                             <span className="ml-2">
                                                 Sekcja dwujęzyczna
                                             </span>
-                                        </button>
+                                        </button> */}
+                                        <Button
+                                            aria-controls="fade-menu"
+                                            aria-haspopup="true"
+                                            onClick={handleClick}
+                                            className="hover:opacity-75 focus:border-transparent focus:outline-none"
+                                        >
+                                            <i className="fas fa-language text-lg leading-lg text-white opacity-75"></i>
+                                            <span className="ml-2 font-bold leading-snug text-white ">
+                                                Sekcja dwujęzyczna
+                                            </span>
+                                        </Button>
+                                        <Menu
+                                            id="fade-menu"
+                                            anchorEl={anchorEl}
+                                            keepMounted
+                                            open={open}
+                                            onClose={handleClose}
+                                            TransitionComponent={Fade}
+                                        >
+                                            <MenuItem onClick={handleClose}>
+                                                Profile
+                                            </MenuItem>
+                                            <MenuItem onClick={handleClose}>
+                                                My account
+                                            </MenuItem>
+                                            <MenuItem onClick={handleClose}>
+                                                Logout
+                                            </MenuItem>
+                                        </Menu>
                                     </li>
-                                    <StyleRoot>
+                                    {/* <StyleRoot>
                                         <ul
                                             id="thirdDropdown"
                                             style={styles.fadeIn}
@@ -351,11 +464,11 @@ function Navbar() {
                                                 </a>
                                             </li>
                                         </ul>
-                                    </StyleRoot>
+                                    </StyleRoot> */}
                                 </div>
                                 <div className="flex-col lg:flex-row">
                                     <li className="nav-item">
-                                        <button
+                                        {/* <button
                                             type="button"
                                             className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 focus:border-transparent focus:outline-none"
                                             href="#pablo"
@@ -391,7 +504,36 @@ function Navbar() {
                                             <span className="ml-2">
                                                 Kontakt
                                             </span>
-                                        </button>
+                                        </button> */}
+                                        <Button
+                                            aria-controls="fade-menu"
+                                            aria-haspopup="true"
+                                            onClick={handleClick}
+                                            className="hover:opacity-75 focus:border-transparent focus:outline-none"
+                                        >
+                                            <i className="fas fa-phone-square text-lg leading-lg text-white opacity-75"></i>
+                                            <span className="ml-2 font-bold leading-snug text-white ">
+                                                Kontakt
+                                            </span>
+                                        </Button>
+                                        <Menu
+                                            id="fade-menu"
+                                            anchorEl={anchorEl}
+                                            keepMounted
+                                            open={open}
+                                            onClose={handleClose}
+                                            TransitionComponent={Fade}
+                                        >
+                                            <MenuItem onClick={handleClose}>
+                                                Profile
+                                            </MenuItem>
+                                            <MenuItem onClick={handleClose}>
+                                                My account
+                                            </MenuItem>
+                                            <MenuItem onClick={handleClose}>
+                                                Logout
+                                            </MenuItem>
+                                        </Menu>
                                     </li>
                                     <StyleRoot>
                                         <ul

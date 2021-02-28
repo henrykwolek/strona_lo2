@@ -13,7 +13,7 @@ const styles = {
 };
 
 const images = [
-    "https://images4.alphacoders.com/103/thumb-1920-1038322.jpg",
+    "https://s-trojmiasto.pl/zdj/c/n/13/1247/960x540/1247662-Szkoly-z-historia-II-LO-w-Gdyni__kr.jpg",
     "https://wallpaperaccess.com/full/2029165.jpg",
     "https://images7.alphacoders.com/617/617537.jpg",
     "https://wallpapercave.com/wp/wp1880337.jpg",
@@ -31,6 +31,53 @@ const span_ids = [
 export default function RightSidebar() {
     return (
         <div>
+            <div class="flex w-full bg-white shadow md:hidden lg:hidden xl:hidden flex-col my-2 p-3">
+                <p class="text-xl font-semibold pb-5">Galeria zdjęć</p>
+                <div class="grid grid-cols-3 gap-3">
+                    <img
+                        class="hover:opacity-75"
+                        src="https://source.unsplash.com/collection/1346951/150x150?sig=1"
+                    />
+                    <img
+                        class="hover:opacity-75"
+                        src="https://source.unsplash.com/collection/1346951/150x150?sig=2"
+                    />
+                    <img
+                        class="hover:opacity-75"
+                        src="https://source.unsplash.com/collection/1346951/150x150?sig=3"
+                    />
+                    <img
+                        class="hover:opacity-75"
+                        src="https://source.unsplash.com/collection/1346951/150x150?sig=4"
+                    />
+                    <img
+                        class="hover:opacity-75"
+                        src="https://source.unsplash.com/collection/1346951/150x150?sig=5"
+                    />
+                    <img
+                        class="hover:opacity-75"
+                        src="https://source.unsplash.com/collection/1346951/150x150?sig=6"
+                    />
+                    <img
+                        class="hover:opacity-75"
+                        src="https://source.unsplash.com/collection/1346951/150x150?sig=7"
+                    />
+                    <img
+                        class="hover:opacity-75"
+                        src="https://source.unsplash.com/collection/1346951/150x150?sig=8"
+                    />
+                    <img
+                        class="hover:opacity-75"
+                        src="https://source.unsplash.com/collection/1346951/150x150?sig=9"
+                    />
+                </div>
+                <a
+                    href="#"
+                    class="w-full bg-blue-800 text-white font-bold text-sm uppercase rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-6"
+                >
+                    Przeglądaj zdjęcia
+                </a>
+            </div>
             <div className="flex items-center justify-center mb-3">
                 <figure className="relative max-w-xs">
                     <img
